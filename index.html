@@ -156,14 +156,6 @@ font-size:22px;
 color:#d9d9d9;
 }
 
-.subs{
-margin-top:15px;
-font-size:22px;
-color:#00ffff;
-font-weight:bold;
-text-shadow:0 0 10px cyan;
-}
-
 /* Button */
 
 .btn{
@@ -206,13 +198,6 @@ box-shadow:0 0 25px rgba(255,255,255,0.1);
 .thumb:hover{
 transform:scale(1.02);
 box-shadow:0 0 35px cyan;
-}
-
-#videoTitle{
-margin-top:20px;
-font-size:22px;
-line-height:1.5;
-color:#e8e8e8;
 }
 
 /* About */
@@ -267,10 +252,6 @@ font-size:38px;
 font-size:17px;
 }
 
-.subs{
-font-size:18px;
-}
-
 .btn{
 font-size:18px;
 padding:15px 28px;
@@ -278,10 +259,6 @@ padding:15px 28px;
 
 .video h2{
 font-size:30px;
-}
-
-#videoTitle{
-font-size:17px;
 }
 
 .about h2{
@@ -318,10 +295,6 @@ font-size:16px;
 Official Highlights Channel Website
 </p>
 
-<p id="subs" class="subs">
-Loading Subscribers...
-</p>
-
 <a class="btn"
 href="https://youtube.com/@the_legend_shreemaan?si=9_9cKHSAdSXYcMGP"
 target="_blank">
@@ -336,15 +309,13 @@ Subscribe Now
 
 <h2>Latest Video</h2>
 
-<a id="videoLink" target="_blank">
+<a href="https://youtu.be/WBJtRQ0iXIY?si=wnDZCkvlKsOOJdDn"
+target="_blank">
 
-<img id="thumbnail"
-class="thumb"
-src="">
+<img class="thumb"
+src="https://img.youtube.com/vi/WBJtRQ0iXIY/maxresdefault.jpg">
 
 </a>
-
-<p id="videoTitle"></p>
 
 </div>
 
@@ -374,71 +345,6 @@ Made by Ramsurwase using GitHub Pages
 </div>
 
 </div>
-
-<script>
-
-const API_KEY = "AIzaSyDJamKnwMJB3fTo4kzlXh8K524MxVYsTHg";
-
-const CHANNEL_ID = "UC7qBhYj2Y5CZG4WzSWWpkGQ";
-
-async function loadChannelData(){
-
-try{
-
-/* Latest Video */
-
-const videoUrl =
-`https://www.googleapis.com/youtube/v3/search?key=${API_KEY}&channelId=${CHANNEL_ID}&part=snippet,id&order=date&maxResults=1&type=video`;
-
-const videoResponse = await fetch(videoUrl);
-
-const videoData = await videoResponse.json();
-
-const video = videoData.items[0];
-
-const videoId = video.id.videoId;
-
-const title = video.snippet.title;
-
-document.getElementById("thumbnail").src =
-`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
-
-document.getElementById("videoLink").href =
-`https://youtu.be/${videoId}`;
-
-document.getElementById("videoTitle").innerText =
-title;
-
-/* Subscriber Count */
-
-const channelUrl =
-`https://www.googleapis.com/youtube/v3/channels?part=statistics&id=${CHANNEL_ID}&key=${API_KEY}`;
-
-const channelResponse = await fetch(channelUrl);
-
-const channelData = await channelResponse.json();
-
-const subscribers =
-channelData.items[0].statistics.subscriberCount;
-
-document.getElementById("subs").innerText =
-subscribers + "+ Subscribers";
-
-}catch(error){
-
-document.getElementById("videoTitle").innerText =
-"Latest video loading failed";
-
-document.getElementById("subs").innerText =
-"Subscriber count failed";
-
-}
-
-}
-
-loadChannelData();
-
-</script>
 
 </body>
 </html>
