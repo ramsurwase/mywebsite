@@ -6,55 +6,122 @@
 <style>
 
 body{
-background:#0f0f0f;
-color:white;
-font-family:Arial;
-margin:0;
-text-align:center;
+    margin:0;
+    padding:0;
+    background:black;
+    color:white;
+    font-family:Arial;
+    text-align:center;
+    overflow-x:hidden;
 }
 
-.header{
-padding:40px;
-background:#111;
+/* Animated Background */
+
+.bg{
+    position:fixed;
+    width:100%;
+    height:100%;
+    z-index:-1;
+    overflow:hidden;
+    top:0;
+    left:0;
 }
 
-  .profile{
-  width:120px;
-  height:120px;
-  border-radius:50%;
-  border:3px solid cyan;
-  object-fit:cover;
-  margin-top:20px;
-  }
+.bg span{
+    position:absolute;
+    display:block;
+    width:20px;
+    height:20px;
+    background:cyan;
+    animation:move 15s linear infinite;
+    bottom:-150px;
+    border-radius:50%;
+    opacity:0.5;
+}
+
+.bg span:nth-child(1){
+    left:10%;
+    width:40px;
+    height:40px;
+    animation-duration:12s;
+}
+
+.bg span:nth-child(2){
+    left:30%;
+    width:25px;
+    height:25px;
+    animation-duration:18s;
+}
+
+.bg span:nth-child(3){
+    left:50%;
+    width:50px;
+    height:50px;
+    animation-duration:10s;
+}
+
+.bg span:nth-child(4){
+    left:70%;
+    width:35px;
+    height:35px;
+    animation-duration:20s;
+}
+
+.bg span:nth-child(5){
+    left:90%;
+    width:30px;
+    height:30px;
+    animation-duration:14s;
+}
+
+@keyframes move{
+    0%{
+        transform:translateY(0) rotate(0deg);
+        opacity:0.5;
+    }
+
+    100%{
+        transform:translateY(-1200px) rotate(720deg);
+        opacity:0;
+    }
+}
+
+.profile{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    border:3px solid cyan;
+    object-fit:cover;
+    margin-top:30px;
+}
 
 h1{
-color:cyan;
-font-size:45px;
+    color:cyan;
+    font-size:50px;
 }
 
 p{
-font-size:18px;
-color:#ccc;
+    color:lightgray;
 }
 
-.subscribe{
-background:red;
-color:white;
-padding:15px 35px;
-border:none;
-border-radius:10px;
-font-size:20px;
-margin-top:20px;
-cursor:pointer;
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:15px 30px;
+    background:red;
+    color:white;
+    text-decoration:none;
+    border-radius:10px;
+    font-size:20px;
 }
 
 .video{
-margin:30px;
+    margin-top:50px;
 }
 
-.thumbnail{
-width:300px;
-border-radius:20px;
+.thumb{
+    width:300px;
+    border-radius:15px;
 }
 
 </style>
@@ -62,22 +129,23 @@ border-radius:20px;
 
 <body>
 
-<div class="header">
+<div class="bg">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
 
-  <img src="IMG_20250114_204130_002.webp" class="profile">
+<img src="IMG_20250114_204130_002.webp" class="profile">
+
 <h1>The Legend Shreemaan 🚀</h1>
 
 <p>Welcome to my official YouTube website</p>
 
-<a href="https://youtube.com/@the_legend_shreemaan?si=9_9cKHSAdSXYcMGP">
-
-<button class="subscribe">
+<a class="btn" href="https://youtube.com/@the_legend_shreemaan?si=9_9cKHSAdSXYcMGP">
 Subscribe Now
-</button>
-
 </a>
-
-</div>
 
 <div class="video">
 
@@ -85,7 +153,8 @@ Subscribe Now
 
 <a href="https://youtu.be/WBJtRQ0iXIY?si=wnDZCkvlKsOOJdDn">
 
-<img class="thumbnail" src="https://i.ytimg.com/vi/WBJtRQ0iXIY/maxresdefault.jpg">
+<img class="thumb"
+src="https://img.youtube.com/vi/WBJtRQ0iXIY/maxresdefault.jpg">
 
 </a>
 
