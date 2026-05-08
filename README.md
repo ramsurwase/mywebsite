@@ -1,29 +1,49 @@
-# 🚀 Ramsurwase
+# Hey, I'm Ramsurwase
 
-### Building Cool Things With HTML & GitHub
-
-💻 Beginner Web Creator  
-🎬 Creator of The Legend Shreemaan Website  
-⚡ Learning coding step-by-step  
-🌌 Interested in creative web design & animations
+### Creator • Beginner Web Developer • YouTube Website Builder
 
 ---
 
-## 🌐 My Website
+## 🔥 About Me
 
+- 🎬 Creator of **The Legend Shreemaan** Website
+- 💻 Learning HTML, CSS & GitHub Pages
+- ⚡ Interested in animated & stylish websites
+- 🚀 Building creator-style web projects
+
+---
+
+# 🌐 My Website
+
+### 🔗 Live Website:
 https://ramsurwase.github.io/mywebsite/
 
 ---
 
-## 🔥 Current Focus
+# 🛠 Skills
 
-- HTML Websites
-- CSS Animations
-- GitHub Pages
-- Creator Style UI Designs
+![HTML](https://img.shields.io/badge/HTML-orange?style=for-the-badge&logo=html5)
+
+![CSS](https://img.shields.io/badge/CSS-blue?style=for-the-badge&logo=css3)
+
+![GitHub](https://img.shields.io/badge/GitHub-black?style=for-the-badge&logo=github)
 
 ---
 
-## 🎯 Goal
+# 📺 My Project
 
-To build stylish creator websites and learn modern web development.
+## The Legend Shreemaan Website
+
+🔥 Animated YouTube Creator Website built using HTML + CSS + GitHub Pages.
+
+---
+
+# 📊 GitHub Stats
+
+![Stats](https://github-readme-stats.vercel.app/api?username=ramsurwase&show_icons=true&theme=tokyonight)
+
+---
+
+# 🚀 Goal
+
+To become better at web development and create stylish creator websites.
