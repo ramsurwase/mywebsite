@@ -1,275 +1,404 @@
 <!DOCTYPE html>
+<html>
+<head>
+<title>The Legend Shreemaan</title>
 
-<html>  
-<head>  
-<title>The Legend Shreemaan</title>  <style>  
-  
-*{  
-margin:0;  
-padding:0;  
-box-sizing:border-box;  
-}  
-  
-body{  
-font-family:Arial;  
-background:#050505;  
-color:white;  
-text-align:center;  
-overflow-x:hidden;  
-}  
-  
-/* Animated Background */  
-  
-.bg{  
-position:fixed;  
-width:100%;  
-height:100%;  
-top:0;  
-left:0;  
-z-index:-1;  
-overflow:hidden;  
-background:linear-gradient(to bottom,#000000,#061a1f);  
-}  
-  
-.bg span{  
-position:absolute;  
-display:block;  
-border-radius:50%;  
-background:rgba(0,255,255,0.15);  
-animation:animate 25s linear infinite;  
-bottom:-150px;  
-backdrop-filter:blur(5px);  
-}  
-  
-.bg span:nth-child(1){  
-left:10%;  
-width:80px;  
-height:80px;  
-animation-duration:15s;  
-}  
-  
-.bg span:nth-child(2){  
-left:25%;  
-width:40px;  
-height:40px;  
-animation-duration:20s;  
-}  
-  
-.bg span:nth-child(3){  
-left:50%;  
-width:100px;  
-height:100px;  
-animation-duration:18s;  
-}  
-  
-.bg span:nth-child(4){  
-left:70%;  
-width:60px;  
-height:60px;  
-animation-duration:25s;  
-}  
-  
-.bg span:nth-child(5){  
-left:90%;  
-width:120px;  
-height:120px;  
-animation-duration:30s;  
-}  
-  
-@keyframes animate{  
-0%{  
-transform:translateY(0) rotate(0deg);  
-opacity:1;  
-}  
-  
-100%{  
-transform:translateY(-1200px) rotate(720deg);  
-opacity:0;  
-}  
-}  
-  
-/* Main Card */  
-  
-.container{  
-width:95%;  
-max-width:700px;  
-margin:auto;  
-margin-top:20px;  
-padding:35px;  
-border-radius:30px;  
-  
-background:rgba(255,255,255,0.05);  
-  
-backdrop-filter:blur(10px);  
-  
-border:1px solid rgba(255,255,255,0.1);  
-  
-box-shadow:0 0 40px rgba(0,255,255,0.2);  
-}  
-  
-/* DP */  
-  
-.profile{  
-width:150px;  
-height:150px;  
-border-radius:50%;  
-object-fit:cover;  
-border:4px solid cyan;  
-box-shadow:0 0 30px cyan;  
-}  
-  
-/* Heading */  
-  
-h1{  
-margin-top:25px;  
-font-size:55px;  
-color:cyan;  
-text-shadow:0 0 20px cyan;  
-}  
-  
-p{  
-margin-top:12px;  
-color:#cccccc;  
-font-size:20px;  
-}  
-  
-/* Button */  
-  
-.btn{  
-display:inline-block;  
-margin-top:30px;  
-padding:18px 40px;  
-background:red;  
-color:white;  
-text-decoration:none;  
-font-size:24px;  
-border-radius:14px;  
-font-weight:bold;  
-transition:0.3s;  
-box-shadow:0 0 20px rgba(255,0,0,0.5);  
-}  
-  
-.btn:hover{  
-transform:scale(1.08);  
-background:#ff1a1a;  
-}  
-  
-/* Video */  
-  
-.video{  
-margin-top:60px;  
-}  
-  
-.video h2{  
-margin-bottom:25px;  
-font-size:38px;  
-color:white;  
-}  
-  
-.thumb{  
-width:90%;  
-border-radius:25px;  
-transition:0.3s;  
-box-shadow:0 0 20px rgba(255,255,255,0.1);  
-}  
-  
-.thumb:hover{  
-transform:scale(1.03);  
-box-shadow:0 0 25px cyan;  
-}  
-  
-/* About Section */  
-  
-.about{  
-margin-top:50px;  
-padding:30px;  
-border-radius:25px;  
-background:rgba(255,255,255,0.05);  
-backdrop-filter:blur(10px);  
-box-shadow:0 0 20px rgba(0,255,255,0.1);  
-}  
-  
-.about h2{  
-font-size:38px;  
-color:cyan;  
-margin-bottom:20px;  
-text-shadow:0 0 10px cyan;  
-}  
-  
-.about p{  
-font-size:20px;  
-line-height:1.8;  
-color:#dddddd;  
-}  
-  
-/* Footer */  
-  
-.footer{  
-margin-top:50px;  
-font-size:16px;  
-color:gray;  
-}  
-  
-/* Mobile */  
-  
-@media(max-width:600px){  
-  
-h1{  
-font-size:32px;  
-}  
-  
-p{  
-font-size:15px;  
-}  
-  
-.profile{  
-width:120px;  
-height:120px;  
-}  
-  
-.btn{  
-font-size:18px;  
-padding:14px 28px;  
-}  
-  
-.video h2{  
-font-size:28px;  
-}  
-  
-.about h2{  
-font-size:28px;  
-}  
-  
-.about p{  
-font-size:16px;  
-}  
-  
-}  
-  
-</style>  </head>  <body>  <div class="bg">  
-<span></span>  
-<span></span>  
-<span></span>  
-<span></span>  
-<span></span>  
-</div>  <div class="container">  <img src="IMG_20250114_204130_002.webp" class="profile">  <h1>The Legend Shreemaan </h1>  <p>Official YouTube Creator Website</p>  <a class="btn"  
-href="https://youtube.com/@the_legend_shreemaan?si=9_9cKHSAdSXYcMGP">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Arial,sans-serif;
+background:#050505;
+color:white;
+text-align:center;
+overflow-x:hidden;
+}
+
+/* Animated Background */
+
+.bg{
+position:fixed;
+width:100%;
+height:100%;
+top:0;
+left:0;
+z-index:-1;
+overflow:hidden;
+background:linear-gradient(to bottom,#000000,#04151a);
+}
+
+.bg span{
+position:absolute;
+display:block;
+border-radius:50%;
+background:rgba(0,255,255,0.15);
+animation:animate 25s linear infinite;
+bottom:-150px;
+box-shadow:0 0 20px cyan;
+}
+
+.bg span:nth-child(1){
+left:5%;
+width:90px;
+height:90px;
+animation-duration:15s;
+}
+
+.bg span:nth-child(2){
+left:20%;
+width:40px;
+height:40px;
+animation-duration:18s;
+}
+
+.bg span:nth-child(3){
+left:40%;
+width:120px;
+height:120px;
+animation-duration:22s;
+}
+
+.bg span:nth-child(4){
+left:65%;
+width:70px;
+height:70px;
+animation-duration:20s;
+}
+
+.bg span:nth-child(5){
+left:85%;
+width:140px;
+height:140px;
+animation-duration:30s;
+}
+
+@keyframes animate{
+
+0%{
+transform:translateY(0) rotate(0deg);
+opacity:1;
+}
+
+100%{
+transform:translateY(-1300px) rotate(720deg);
+opacity:0;
+}
+
+}
+
+/* Main Container */
+
+.container{
+width:95%;
+max-width:750px;
+margin:25px auto;
+padding:40px 25px;
+border-radius:35px;
+
+background:rgba(255,255,255,0.05);
+
+backdrop-filter:blur(15px);
+
+border:1px solid rgba(255,255,255,0.1);
+
+box-shadow:
+0 0 40px rgba(0,255,255,0.2),
+0 0 80px rgba(0,255,255,0.08);
+}
+
+/* Profile */
+
+.profile{
+width:170px;
+height:170px;
+border-radius:50%;
+object-fit:cover;
+border:5px solid cyan;
+box-shadow:
+0 0 20px cyan,
+0 0 50px cyan;
+animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+
+0%{
+box-shadow:0 0 20px cyan;
+}
+
+100%{
+box-shadow:0 0 45px cyan;
+}
+
+}
+
+/* Heading */
+
+h1{
+margin-top:25px;
+font-size:58px;
+line-height:1.1;
+color:cyan;
+text-shadow:0 0 20px cyan;
+}
+
+.subtitle{
+margin-top:15px;
+font-size:22px;
+color:#d9d9d9;
+}
+
+/* Button */
+
+.btn{
+display:inline-block;
+margin-top:35px;
+padding:18px 42px;
+background:red;
+color:white;
+text-decoration:none;
+font-size:24px;
+font-weight:bold;
+border-radius:15px;
+transition:0.3s;
+box-shadow:0 0 25px rgba(255,0,0,0.5);
+}
+
+.btn:hover{
+transform:scale(1.08);
+background:#ff1a1a;
+}
+
+/* Video Section */
+
+.video{
+margin-top:65px;
+}
+
+.video h2{
+font-size:42px;
+margin-bottom:25px;
+}
+
+.thumb{
+width:100%;
+border-radius:25px;
+transition:0.3s;
+box-shadow:0 0 25px rgba(255,255,255,0.1);
+}
+
+.thumb:hover{
+transform:scale(1.02);
+box-shadow:0 0 35px cyan;
+}
+
+#videoTitle{
+margin-top:20px;
+font-size:22px;
+line-height:1.5;
+color:#e8e8e8;
+}
+
+/* About */
+
+.about{
+margin-top:60px;
+padding:35px;
+border-radius:25px;
+background:rgba(255,255,255,0.05);
+box-shadow:0 0 20px rgba(0,255,255,0.1);
+}
+
+.about h2{
+font-size:40px;
+margin-bottom:25px;
+color:cyan;
+text-shadow:0 0 15px cyan;
+}
+
+.about p{
+font-size:21px;
+line-height:1.9;
+color:#dddddd;
+}
+
+/* Footer */
+
+.footer{
+margin-top:55px;
+font-size:16px;
+color:gray;
+}
+
+/* Mobile */
+
+@media(max-width:600px){
+
+.container{
+padding:30px 18px;
+}
+
+.profile{
+width:130px;
+height:130px;
+}
+
+h1{
+font-size:38px;
+}
+
+.subtitle{
+font-size:17px;
+}
+
+.btn{
+font-size:18px;
+padding:15px 28px;
+}
+
+.video h2{
+font-size:30px;
+}
+
+#videoTitle{
+font-size:17px;
+}
+
+.about h2{
+font-size:30px;
+}
+
+.about p{
+font-size:16px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="bg">
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+</div>
+
+<div class="container">
+
+<img src="IMG_20250114_204130_002.webp" class="profile">
+
+<h1>The Legend Shreemaan</h1>
+
+<p class="subtitle">
+Official Highlights Channel Website
+</p>
+
+<a class="btn"
+href="https://youtube.com/@the_legend_shreemaan?si=9_9cKHSAdSXYcMGP"
+target="_blank">
 Subscribe Now
 </a>
 
-<div class="video">  <h2>Latest Video</h2>  <a href="https://youtu.be/WBJtRQ0iXIY?si=wnDZCkvlKsOOJdDn">  <img class="thumb"  
-src="https://img.youtube.com/vi/WBJtRQ0iXIY/maxresdefault.jpg">
+<!-- Latest Video -->
 
-</a>  </div>  <div class="about">  <h2>About Channel</h2>  <p>  ◽The Legend Shreemaan◽ is a highlights channel dedicated to highlight videos of the legendary Honourable Shreeman Legend.<br><br>
+<div class="video">
 
-This channel features the best funny moments, intense scenes, crazy robberies, emotional moments, and entertaining highlights from live streams.<br><br>
+<h2>Latest Video</h2>
 
-📅 Channel Created: 7 November 2024<br>
-👥 3K+ Subscribers Growing Strong<br><br>
+<a id="videoLink" target="_blank">
+
+<img id="thumbnail"
+class="thumb"
+src="">
+
+</a>
+
+<p id="videoTitle"></p>
+
+</div>
+
+<!-- About -->
+
+<div class="about">
+
+<h2>About Channel</h2>
+
+<p>
+
+◽ The Legend Shreemaan ◽ is a highlights channel dedicated to the best moments from Honourable Shreeman Legend live streams.<br><br>
+
+Funny moments, crazy robberies, emotional scenes, intense gameplay, and entertaining stream highlights are uploaded regularly for the audience.<br><br>
+
+📅 Created On: 7 November 2024<br>
+👥 3K+ Subscribers & Growing Fast<br><br>
 
 Thank you for supporting the journey and being part of the legend 🔥
 
-</p>  </div>  <div class="footer">  
-Made by Ramsurwase using GitHub Pages  
-</div>  </div>  </body>  
-  </html>
+</p>
+
+</div>
+
+<div class="footer">
+Made by Ramsurwase using GitHub Pages
+</div>
+
+</div>
+
+<script>
+
+const API_KEY = "AlzaSyDJamKnwMJB3fTo4kzlXh8K524MxVYsTHg";
+
+const CHANNEL_ID = "UC7qBhYj2Y5CZG4WzSWWpkGQ";
+
+async function loadLatestVideo(){
+
+try{
+
+const url =
+`https://www.googleapis.com/youtube/v3/search?key=${API_KEY}&channelId=${CHANNEL_ID}&part=snippet,id&order=date&maxResults=1&type=video`;
+
+const response = await fetch(url);
+
+const data = await response.json();
+
+const video = data.items[0];
+
+const videoId = video.id.videoId;
+
+const title = video.snippet.title;
+
+document.getElementById("thumbnail").src =
+`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
+
+document.getElementById("videoLink").href =
+`https://youtu.be/${videoId}`;
+
+document.getElementById("videoTitle").innerText =
+title;
+
+}catch(error){
+
+document.getElementById("videoTitle").innerText =
+"Latest video loading failed";
+
+}
+
+}
+
+loadLatestVideo();
+
+</script>
+
+</body>
+</html>
