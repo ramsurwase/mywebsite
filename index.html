@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <title>The Legend Shreemaan</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -155,6 +156,14 @@ font-size:22px;
 color:#d9d9d9;
 }
 
+.subs{
+margin-top:15px;
+font-size:22px;
+color:#00ffff;
+font-weight:bold;
+text-shadow:0 0 10px cyan;
+}
+
 /* Button */
 
 .btn{
@@ -258,6 +267,10 @@ font-size:38px;
 font-size:17px;
 }
 
+.subs{
+font-size:18px;
+}
+
 .btn{
 font-size:18px;
 padding:15px 28px;
@@ -282,6 +295,7 @@ font-size:16px;
 }
 
 </style>
+
 </head>
 
 <body>
@@ -304,10 +318,16 @@ font-size:16px;
 Official Highlights Channel Website
 </p>
 
+<p id="subs" class="subs">
+Loading Subscribers...
+</p>
+
 <a class="btn"
 href="https://youtube.com/@the_legend_shreemaan?si=9_9cKHSAdSXYcMGP"
 target="_blank">
+
 Subscribe Now
+
 </a>
 
 <!-- Latest Video -->
@@ -357,22 +377,24 @@ Made by Ramsurwase using GitHub Pages
 
 <script>
 
-const API_KEY = "AlzaSyDJamKnwMJB3fTo4kzlXh8K524MxVYsTHg";
+const API_KEY = "AIzaSyDJamKnwMJB3fTo4kzlXh8K524MxVYsTHg";
 
 const CHANNEL_ID = "UC7qBhYj2Y5CZG4WzSWWpkGQ";
 
-async function loadLatestVideo(){
+async function loadChannelData(){
 
 try{
 
-const url =
+/* Latest Video */
+
+const videoUrl =
 `https://www.googleapis.com/youtube/v3/search?key=${API_KEY}&channelId=${CHANNEL_ID}&part=snippet,id&order=date&maxResults=1&type=video`;
 
-const response = await fetch(url);
+const videoResponse = await fetch(videoUrl);
 
-const data = await response.json();
+const videoData = await videoResponse.json();
 
-const video = data.items[0];
+const video = videoData.items[0];
 
 const videoId = video.id.videoId;
 
@@ -387,16 +409,34 @@ document.getElementById("videoLink").href =
 document.getElementById("videoTitle").innerText =
 title;
 
+/* Subscriber Count */
+
+const channelUrl =
+`https://www.googleapis.com/youtube/v3/channels?part=statistics&id=${CHANNEL_ID}&key=${API_KEY}`;
+
+const channelResponse = await fetch(channelUrl);
+
+const channelData = await channelResponse.json();
+
+const subscribers =
+channelData.items[0].statistics.subscriberCount;
+
+document.getElementById("subs").innerText =
+subscribers + "+ Subscribers";
+
 }catch(error){
 
 document.getElementById("videoTitle").innerText =
 "Latest video loading failed";
 
-}
+document.getElementById("subs").innerText =
+"Subscriber count failed";
 
 }
 
-loadLatestVideo();
+}
+
+loadChannelData();
 
 </script>
 
